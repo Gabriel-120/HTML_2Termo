@@ -17,6 +17,7 @@
         <a data-section="sobre">Sobre-Mim</a>
         <a data-section="hobbies">Hobbies</a>
         <a data-section="habilidades">Habilidades</a>
+        <a data-section="links">Links Externos</a>
     </nav>
 
 
@@ -25,7 +26,10 @@
         <section id="sobre">
             <h2>Sobre mim</h2>
             <img src="avatar.jpg" alt="Foto de perfil">
-            <p>Olá! Sou estudante de desenvolvimento web e apaixonado por tecnologia.</p>
+            <p>Olá! Meu nome é Gabriel de Oliveira Gomes tenho 17 anos e atualmente estou no 2° ano do ensino medio na
+                Etec Trajano Camargo e também estou cursando dessenvolvimento de sistemas no senai de Limeira-SP. </p>
+
+
         </section>
 
         <section id="hobbies">
@@ -33,7 +37,8 @@
             <ul>
                 <li>Jogos</li>
                 <li>Programação</li>
-                <li>Música</li>
+                <li>Ouvir música</li>
+                <li>Jogar Basquete</li>
             </ul>
         </section>
 
@@ -52,6 +57,10 @@
                     <td>CSS</td>
                     <td>Intermediário</td>
                 </tr>
+                <tr>
+                    <td>Dormir</td>
+                    <td>Expert</td>
+                </tr>
             </table>
         </section>
 
@@ -59,17 +68,19 @@
             <h2>Links Externos</h2>
             <ul>
                 <li><a href="https://github.com/Gabriel-120" target="_blank">GitHub</a></li>
+                <li><a href="mailto:gabriel.o.gomes7@aluno.senai.br">E-mail</a></li>
             </ul>
         </section>
+
     </main>
 
-    <footer>
+    <!-- <footer>
         <p>Contato: gabriel.o.gomes7@aluno.senai.br</p>
-    </footer>
+    </footer> -->
 
     <script>
         window.addEventListener('DOMContentLoaded', function () {
-            const sections = ['sobre', 'hobbies', 'habilidades', 'inicio'];
+            const sections = ['sobre', 'hobbies', 'habilidades', 'inicio', 'links'];
             const navLinks = document.querySelectorAll('nav a');
 
             sections.forEach(id => {
