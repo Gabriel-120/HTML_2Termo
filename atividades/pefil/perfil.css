@@ -18,6 +18,19 @@ header {
     padding: 20px 0;
 }
 
+nav {
+    background: #444;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
 main {
     max-width: 900px;
     margin: 20px auto;

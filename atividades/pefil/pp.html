@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil Pessoal</title>
     <link rel="stylesheet" href="perfil.css">
 </head>
+
 <body>
     <header>
-        <h1>Gabriel de Oliveira Gomes</h1>
+        <h1>Perfil Pessoal</h1>
     </header>
 
+    <nav>
+        <a data-section="sobre">Sobre-Mim</a>
+        <a data-section="hobbies">Hobbies</a>
+        <a data-section="habilidades">Habilidades</a>
+    </nav>
+
+
     <main>
-        
+
         <section id="sobre">
             <h2>Sobre mim</h2>
             <img src="avatar.jpg" alt="Foto de perfil">
@@ -37,7 +46,7 @@
                 </tr>
                 <tr>
                     <td>HTML</td>
-                    <td>Avançado</td>
+                    <td>Intermediário</td>
                 </tr>
                 <tr>
                     <td>CSS</td>
@@ -50,13 +59,39 @@
             <h2>Links Externos</h2>
             <ul>
                 <li><a href="https://github.com/Gabriel-120" target="_blank">GitHub</a></li>
-                <li><a href="gabriel.o.gomes7@aluno.senai.br" target="_blank">Email</a></li>
             </ul>
         </section>
     </main>
 
     <footer>
-        <p>Contato: gabriel@email.com</p>
+        <p>Contato: gabriel.o.gomes7@aluno.senai.br</p>
     </footer>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            const sections = ['sobre', 'hobbies', 'habilidades', 'inicio'];
+            const navLinks = document.querySelectorAll('nav a');
+
+            sections.forEach(id => {
+                const div = document.getElementById(id);
+                if (div) div.style.display = 'none';
+            });
+
+            const firstDiv = document.getElementById(sections[0]);
+            if (firstDiv) firstDiv.style.display = 'block';
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.dataset.section;
+                    sections.forEach(id => {
+                        const div = document.getElementById(id);
+                        if (div) div.style.display = (id === targetId) ? 'block' : 'none';
+                    });
+                });
+            });
+        });
+    </script>
 </body>
+
 </html>
