@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="perfil.css">
+    <title>Perfil Pessoal</title>
+</head>
+<body>
+    <header>
+        <h1>Perfil Pessoal</h1>
+    </header>
+
+    <nav>
+        <a onclick="sobre()">Sobre-Mim</a>
+        <a onclick="hobbies()">Hobbies</a>
+        <a onclick="link()">Links Externos</a>
+    </nav>
+
+
+    <main>
+
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <table>
+                <tr>
+                    <th>Habilidade</th>
+                    <th>Nível</th>
+                </tr>
+                <tr>
+                    <td>HTML</td>
+                    <td>Intermediário</td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>Intermediário</td>
+                </tr>
+                <tr>
+                    <td>Dormir</td>
+                    <td>Expert</td>
+                </tr>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <p><p>Para me chamar no Whatsapp</p><a href="https://wa.me/5519982443230?text=Olá%20Gabriel%2C%20vim%20pelo%20seu%20site!" target="_blank" style="color: blue;">Click Aqui</a></p>
+    </footer>
+
+    <script>
+        function link() {
+            window.location.href = "pp4.html";
+        }
+
+        function hobbies() {
+            window.location.href = "pp2.html";
+        }
+
+        function sobre() {
+            window.location.href = "pp.html";
+        }
+    </script>
+</body>
+</html>

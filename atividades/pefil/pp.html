@@ -14,10 +14,9 @@
     </header>
 
     <nav>
-        <a data-section="sobre">Sobre-Mim</a>
-        <a data-section="hobbies">Hobbies</a>
-        <a data-section="habilidades">Habilidades</a>
-        <a data-section="links">Links Externos</a>
+        <a onclick="hobbies()">Hobbies</a>
+        <a onclick="habilidades()">Habilidades</a>
+        <a onclick="link()">Links Externos</a>
     </nav>
 
 
@@ -25,83 +24,33 @@
 
         <section id="sobre">
             <h2>Sobre mim</h2>
-            <img src="/atividades/pefil/imagem/WIN_20250807_15_56_51_Pro.jpg" alt="Foto de perfil" width="400" height="150">
-            <p>Olá! Meu nome é Gabriel de Oliveira Gomes tenho 17 anos e atualmente estou no 2° ano do ensino medio na
-                Etec Trajano Camargo e também estou cursando dessenvolvimento de sistemas no senai de Limeira-SP. </p>
-
-
-        </section>
-
-        <section id="hobbies">
-            <h2>Meus Hobbies</h2>
-            <ul>
-                <li>Jogos</li>
-                <li>Programação</li>
-                <li>Ouvir música</li>
-                <li>Jogar Basquete</li>
-            </ul>
-        </section>
-
-        <section id="habilidades">
-            <h2>Habilidades</h2>
-            <table>
-                <tr>
-                    <th>Habilidade</th>
-                    <th>Nível</th>
-                </tr>
-                <tr>
-                    <td>HTML</td>
-                    <td>Intermediário</td>
-                </tr>
-                <tr>
-                    <td>CSS</td>
-                    <td>Intermediário</td>
-                </tr>
-                <tr>
-                    <td>Dormir</td>
-                    <td>Expert</td>
-                </tr>
-            </table>
-        </section>
-
-        <section id="links">
-            <h2>Links Externos</h2>
-            <ul>
-                <li><a href="https://github.com/Gabriel-120" target="_blank">GitHub</a></li>
-                <li><a href="mailto:gabriel.o.gomes7@aluno.senai.br" target="_blank">E-mail</a></li>
-            </ul>
+            <img src="/atividades/pefil/imagem/WIN_20250807_15_56_51_Pro.jpg" alt="Foto de perfil" width="300"
+                height="150">
+            <p>Olá! Meu nome é Gabriel de Oliveira Gomes tenho 17 anos e atualmente estou no 2° ano do ensino medio na Etec Trajano Camargo e também estou cursando dessenvolvimento de sistemas no senai de Limeira-SP. </p>
         </section>
 
     </main>
 
     <footer>
-        <p><p>Para me chamar no Whatsapp</p><a href="https://wa.me/5519982443230?text=Olá%20Gabriel%2C%20vim%20pelo%20seu%20site!" target="_blank" style="color: blue;">Click Aqui</a></p>
+        <p>
+        <p>Para me chamar no Whatsapp</p><a
+            href="https://wa.me/5519982443230?text=Olá%20Gabriel%2C%20vim%20pelo%20seu%20site!" target="_blank"
+            style="color: blue;">Click Aqui</a></p>
     </footer>
 
     <script>
-        window.addEventListener('DOMContentLoaded', function () {
-            const sections = ['sobre', 'hobbies', 'habilidades', 'inicio', 'links'];
-            const navLinks = document.querySelectorAll('nav a');
+        function link() {
+            window.location.href = "pp4.html";
+        }
 
-            sections.forEach(id => {
-                const div = document.getElementById(id);
-                if (div) div.style.display = 'none';
-            });
+        function habilidades() {
+            window.location.href = "pp3.html";
+        }
 
-            const firstDiv = document.getElementById(sections[0]);
-            if (firstDiv) firstDiv.style.display = 'block';
+        function hobbies() {
+            window.location.href = "pp2.html";
+        }
 
-            navLinks.forEach(link => {
-                link.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const targetId = this.dataset.section;
-                    sections.forEach(id => {
-                        const div = document.getElementById(id);
-                        if (div) div.style.display = (id === targetId) ? 'block' : 'none';
-                    });
-                });
-            });
-        });
     </script>
 </body>
 
