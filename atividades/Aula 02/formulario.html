@@ -1,31 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Inscrição de Voluntários</title>
+    <link rel="stylesheet" href="Atividade.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Formulario de Matricula</h1>
-        <form action="processar_matricula.php" method="POST">
+    <div class="container-form">
+        <h1>Inscrição de Voluntários</h1>
+        <p>Preencha o formulário abaixo para se inscrever como voluntário em nossos eventos e pastorais.</p>
+        
+        <form action="processar_inscricao.php" method="POST">
             <label for="nome">Nome Completo:</label>
             <input type="text" id="nome" name="nome" required>
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone">
+            <label for="telefone">Telefone / WhatsApp:</label>
+            <input type="tel" id="telefone" name="telefone" required>
 
-            <label for="evento">Eventos:</label>
+            <label for="evento">Evento ou Pastoral de Interesse:</label>
             <select id="evento" name="evento">
                 <option value="quermesse">Quermesse</option>
-                <option value="festa">Festa Junina</option>
-                <option value="festa-antonio">Festa de Santo Antonio</option>
+                <option value="festa-junina">Festa Junina</option>
+                <option value="festa-antonio">Festa de Santo Antônio</option>
+                <option value="catequese">Catequese</option>
+                <option value="grupo-jovens">Grupo de Jovens</option>
+                <option value="pastoral-dizimo">Pastoral do Dízimo</option>
             </select>
 
-            <button type="submit">Enviar</button>
+            <label>Em que área gostaria de ajudar?</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="ajuda-cozinha" name="ajuda[]" value="cozinha">
+                <label for="ajuda-cozinha">Cozinha</label><br>
+                <input type="checkbox" id="ajuda-caixa" name="ajuda[]" value="caixa">
+                <label for="ajuda-caixa">Caixa</label><br>
+                <input type="checkbox" id="ajuda-montagem" name="ajuda[]" value="montagem">
+                <label for="ajuda-montagem">Montagem / Organização</label><br>
+                <input type="checkbox" id="ajuda-limpeza" name="ajuda[]" value="limpeza">
+                <label for="ajuda-limpeza">Limpeza</label><br>
+            </div>
+            
+            <label for="disponibilidade">Qual a sua disponibilidade de horário?</label>
+            <input type="text" id="disponibilidade" name="disponibilidade" placeholder="Ex: Noites durante a semana, Sábados à tarde...">
+
+            <button type="submit">Enviar Inscrição</button>
+        </form>
+        <a href="Atividade.html" class="voltar">Voltar para a Página Inicial</a>
     </div>
 </body>
 </html>

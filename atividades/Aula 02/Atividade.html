@@ -1,60 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capela Santo Antonio</title>
+    <link rel="stylesheet" href="Atividade.css">
+    <title>Capela Santo Antônio</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
     <header>
+        <h1>Capela Santo Antônio</h1>
         <nav class="navegacao">
-            <button onclick="Mostrarsecao('inicio')">Inicio</button>
-            <button onclick="Mostrarsecao('evento')">Eventos</button>
-            <button onclick="Mostrarsecao('missa')">Missas</button>
-            <button onclick="Mostrarsecao('contato')">Contato</button>
-            <button onclick="Mostrarsecao('local')">Local</button>
-            <button onclick="Mostrarsecao('comunicado')">Comunicados</button>
+            <button onclick="mostrarSecao('inicio')">Início</button>
+            <button onclick="mostrarSecao('eventos')">Eventos</button>
+            <button onclick="mostrarSecao('missas')">Missas</button>
+            <button onclick="mostrarSecao('contato')">Contato</button>
+            <button onclick="mostrarSecao('local')">Localização</button>
+            <button onclick="mostrarSecao('comunicados')">Comunicados</button>
+            <button onclick="mostrarInscricao()">Inscrições</button>
         </nav>
     </header>
 
     <main>
 
-        <section id="inicio" class="secao hidden">
-            <img src="" alt="">
-            <h1>Bem-vindo à Capela Santo Antonio</h1>
-            <p>Conheça nossa história e missão.</p>
-            <button onclick="Mostrarsecao('evento')">Próximos Eventos</button>
+        <section id="inicio" class="secao">
+            <img src="https://via.placeholder.com/800x300" alt="Imagem da Capela Santo Antônio" class="banner">
+            <h2>Bem-vindo à Capela Santo Antônio</h2>
+            <p>Seja bem-vindo ao nosso lar de fé e comunidade. A Capela Santo Antônio é um lugar de oração, acolhimento e serviço. Navegue pelo nosso site para conhecer mais sobre nossa história, horários de missas e eventos.</p>
+            <button onclick="mostrarSecao('eventos')">Ver Próximos Eventos</button>
         </section>
 
-        <section id="evento" class="secao hidden">
-            <h2>Eventos</h2>
-            <p>Fique por dentro dos próximos eventos da capela.</p>
+        <section id="eventos" class="secao hidden">
+            <h2>Próximos Eventos</h2>
+            <div class="evento-item">
+                <h3>Festa de Santo Antônio</h3>
+                <p><strong>Quando:</strong> De 1 a 13 de Junho.</p>
+                <p>Venha celebrar conosco a trezena em honra ao nosso padroeiro, com missas diárias, barracas de comidas típicas e a tradicional bênção dos pães.</p>
+            </div>
+            <div class="evento-item">
+                <h3>Festa Junina</h3>
+                <p><strong>Quando:</strong> Dias 22 e 23 de Junho.</p>
+                <p>O nosso 'arraiá' está chegando! Teremos danças, brincadeiras e as delícias juninas que todos amam.</p>
+            </div>
+            <div class="evento-item">
+                <h3>Quermesse da Comunidade</h3>
+                <p><strong>Quando:</strong> Todos os sábados de julho, a partir das 18h.</p>
+                <p>Participe da nossa tradicional quermesse com muita comida, música e diversão para toda a família.</p>
+            </div>
         </section>
 
-        <section id="missa" class="secao hidden">
-            <h2>Missas</h2>
-            <p>Participe de nossas orações diárias.</p>
+        <section id="missas" class="secao hidden">
+            <h2>Horários de Missas e Confissões</h2>
+            <p>Participe de nossas celebrações.</p>
+            <ul>
+                <li><strong>Domingo:</strong> 8h e 19h.</li>
+                <li><strong>Quarta-feira:</strong> 19h30 (Missa e Novena de Nossa Senhora do Perpétuo Socorro).</li>
+                <li><strong>Toda primeira sexta-feira do mês:</strong> 15h (Missa do Sagrado Coração de Jesus).</li>
+            </ul>
+            <h3>Confissões</h3>
+            <p>As confissões são realizadas toda quarta-feira, das 18h às 19h, na secretaria.</p>
         </section>
 
         <section id="contato" class="secao hidden">
-            <h2>Contato</h2>
-            <p>Entre em contato conosco para mais informações.</p>
+            <h2>Entre em Contato</h2>
+            <p>Estamos à disposição para mais informações.</p>
+            <ul>
+                <li><strong>Telefone da Secretaria:</strong> (19) 3444-5566</li>
+                <li><strong>E-mail:</strong> contato@capelastoantonio.com.br</li>
+                <li><strong>Horário da Secretaria:</strong> Segunda a Sexta, das 8h às 17h.</li>
+                <li>Siga-nos nas redes sociais: <a href="#">Facebook</a> | <a href="#">Instagram</a></li>
+            </ul>
         </section>
 
         <section id="local" class="secao hidden">
-            <h2>Localização</h2>
-            <p>Encontre-nos facilmente com nosso mapa interativo.</p>
+            <h2>Nossa Localização</h2>
+            <p><strong>Endereço:</strong> Rua da Matriz, 123 - Centro, Limeira - SP, CEP: 13480-000</p>
+            <p>Ficamos em frente à Praça Central, ao lado da escola infantil.</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.723733227443!2d-47.40424688450133!3d-22.62681583344183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c880860551c86f%3A0x33e3f37f9e5a195e!2sCatedral%20Nossa%20Senhora%20das%20Dores!5e0!3m2!1spt-BR!2sbr!4v1692822183505!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </section>
 
-        <section id="comunicado" class="secao hidden">
-            <h2>Comunicados</h2>
-            <p>Acompanhe os comunicados importantes da capela.</p>
+        <section id="comunicados" class="secao hidden">
+            <h2>Comunicados Importantes</h2>
+            <div class="comunicado-item">
+                <h3>Inscrições para a Catequese 2026</h3>
+                <p>As inscrições para a turma de catequese do próximo ano já estão abertas. Procure a secretaria para mais informações e para garantir a vaga do seu filho.</p>
+            </div>
+            <div class="comunicado-item">
+                <h3>Campanha do Agasalho</h3>
+                <p>O inverno está chegando e contamos com a sua ajuda! Deixe sua doação de cobertores e agasalhos em bom estado na caixa coletora na entrada da capela.</p>
+            </div>
         </section>
 
     </main>
 
-</body>
+    <script>
+        function mostrarSecao(id) {
+            // Esconde todas as seções
+            document.querySelectorAll('.secao').forEach(function(secao) {
+                secao.classList.add('hidden');
+            });
 
+            // Mostra apenas a seção clicada
+            const secaoAtiva = document.getElementById(id);
+            if (secaoAtiva) {
+                secaoAtiva.classList.remove('hidden');
+            }
+        }
+
+        function mostrarInscricao() {
+            window.location.href = "/HTML_2TERMO/atividades/Aula%02/formulario.html";
+        }
+    </script>
+
+</body>
 </html>
