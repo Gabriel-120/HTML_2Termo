@@ -1,0 +1,55 @@
+#titulo-principal {
+    background-color: darkgreen;
+    color: white;
+    text-align: center;
+}
+
+.topico {
+    text-align: right;
+}
+
+.texto  {
+    text-align: justify;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: nome;
+    color: red;
+}
+
+
+a:visited {
+    color: darkred;
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.especial:hover {
+    color: white;
+    background-color: black;
+    text-decoration: nome;
+}
+
+.especial::before {
+    content: '>';
+    font-weight: lighter;
+}
+
+.especial::after {
+    content: '<';
+    font-weight: lighter;
+}
+
+div > p {
+    display: nome;
+}
+
+div:hover > p {
+    display: block;
+    background-color: red;
+}
