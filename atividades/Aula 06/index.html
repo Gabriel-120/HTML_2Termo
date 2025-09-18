@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="loja.css">
+    <link rel="stylesheet" href="estilo-aprimorado.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Vitrine 2025: Moda, Essência e Estilo em Alta Definição</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="vitrine-header">
+            <div class="brand">
+                <h1>Vitrine 2025</h1>
+            </div>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#colecao">Coleção</a>
+                <a href="#contato">Contato</a>
+                <button class="btn ghost" onclick="mostrar()" style="align-items: center; gap: 10px;"> 
+                    <img src="https://cdn-icons-png.flaticon.com/512/5381/5381441.png" alt="carrinho" style="width: 20px; height: 20px;"> 
+                    Carrinho 
+                </button>
+            </nav>
+        </header>
+
+        <main>
+            <section class="banner">
+                <h2>Alta definição para seu estilo</h2>
+                <p>Uma curadoria de produtos que une inovação, design e as tendências de 2025 para uma experiência de compra imersiva.</p>
+                <a href="#colecao" class="btn">Explorar coleção</a>
+            </section>
+
+            <section id="colecao">
+                <h3>Coleção em Destaque</h3>
+                <div class="produtos-grid">
+
+                    <div class="produto-card">
+                        <div class="card-imagem">
+                           <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQg-9WBa3CM7Dw7_Drz8Mk_QJJCRF3hZ9rbWPKRftj_mVKHi_VZ2zNuZ1LIX3bbTydVZctD8JlM_E4pYOUWNYVCkhm_iVNbujQO6iWN5bOthNzUlsqmvN6C_od79m7RRZpsuXn-MOM&usqp=CAc" alt="Jaqueta Urban">
+                        </div>
+                        <div class="card-info">
+                            <h4>Jaqueta Urban</h4>
+                            <p class="categoria">Roupas</p>
+                            <p class="preco">R$ 349,90</p>
+                            <button class="btn ghost">Ver detalhes</button>
+                            <button class="btn">Carrinho</button>
+                        </div>
+                    </div>
+
+                    <div class="produto-card">
+                         <div class="card-imagem">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQuEissPplY11pCYy48OYCsWi0nR8mPiAPA&s" alt="Perfume Elan">
+                        </div>
+                        <div class="card-info">
+                            <h4>Perfume Elan</h4>
+                            <p class="categoria">Perfumes</p>
+                            <p class="preco">R$ 189,90</p>
+                             <button class="btn ghost">Ver detalhes</button>
+                             <button class="btn">Carrinho</button>
+                        </div>
+                    </div>
+
+                    <div class="produto-card">
+                         <div class="card-imagem">
+                           <img src="https://merciwithlove.com.br/cdn/shop/files/bolsa-alba-preto-liso-frente_ae35ec37-9a21-409f-964b-dabfc7b3ed65.jpg?v=1726751741" alt="Bolsa Alba">
+                        </div>
+                        <div class="card-info">
+                            <h4>Bolsa Alba</h4>
+                            <p class="categoria">Bolsas</p>
+                            <p class="preco">R$ 499,00</p>
+                             <button class="btn ghost">Ver detalhes</button>
+                             <button class="btn">Carrinho</button>
+                        </div>
+                    </div>
+                    
+                    <div class="produto-card">
+                         <div class="card-imagem">
+                            <img src="https://cdn.newlooktime.com.br/media/catalog/product/cache/1/image/6984c3feca2e4514f6dbf5d03fa86be6/8/3/837029-a2642_100-click01.jpg" alt="Relógio Axis">
+                        </div>
+                        <div class="card-info">
+                            <h4>Relógio Axis</h4>
+                            <p class="categoria">Acessórios</p>
+                            <p class="preco">R$ 799,90</p>
+                             <button class="btn ghost">Ver detalhes</button>
+                             <button class="btn">Carrinho</button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <footer class="vitrine-footer">
+            <p>© 2025 — Vitrine 2025. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Newsletter</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function mostrar() {
+            window.location.href = "carrinho.html";
+        }
+    </script>
+</body>
+</html>
