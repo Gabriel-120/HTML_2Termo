@@ -1,0 +1,232 @@
+/* Configurações Globais e de Fundo */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E7F2F8; /* Fundo azul claro da página (igual imagem) */
+}
+
+/* 1. Cabeçalho (Header) */
+header {
+    /* Gradiente azul para combinar com a imagem */
+    background: linear-gradient(to right, #3B5998, #2E477A);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
+    font-weight: bold;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1.1em;
+}
+
+/* 2. Barra de Navegação (Nav) */
+nav {
+    background-color: #2E477A; /* Azul mais escuro (sólido) */
+    padding: 10px 0; /* Padding vertical */
+}
+
+nav ul {
+    /* Centraliza a lista e define a largura para alinhar com o conteúdo */
+    display: flex;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1000px;
+}
+
+nav li {
+    margin-right: 25px; /* Espaçamento entre os links (alinhados à esquerda) */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* 3. Container Principal (para centralizar o conteúdo) */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto; /* Centraliza o .container na página */
+}
+
+/* 4. Caixa de Conteúdo Branca */
+.content {
+    background-color: white;
+    border: 1px solid #B0C4DE; /* Borda azul clara (igual imagem) */
+    border-radius: 8px;
+    overflow: hidden; /* Garante que o conteúdo respeite os cantos arredondados */
+}
+
+/* 5. Seções de Conteúdo (Article) */
+article {
+    padding: 20px;
+}
+
+/* Barra de título "História do Projeto" */
+article h2 {
+    background-color: #6A89C8; /* Barra de título azul clara */
+    color: white;
+    padding: 10px 15px;
+    /* Margem negativa para fazer a barra "esticar" de ponta a ponta */
+    margin: -20px -20px 15px -20px;
+    font-size: 1.3em;
+}
+
+/* Barra de título "Quando começamos?" */
+article h3 {
+    background-color: #6A89C8; /* Mesma cor da barra do h2 */
+    color: white;
+    padding: 8px 15px; /* Um pouco menor que o h2 */
+    margin: 20px -20px 15px -20px; /* Estica igual o h2 */
+    font-size: 1.15em;
+}
+
+/* Títulos internos "Primeiro Mascote" e "Fundador" */
+article h4, article h5 {
+    color: #2E477A; /* Títulos internos em azul escuro */
+}
+
+article p {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* 6. Seção do Vídeo */
+.video-container {
+    text-align: center;
+    background-color: #DFE9F5; /* Fundo levemente azulado para o vídeo */
+    padding: 20px;
+    margin: 0 20px; /* Margens laterais para descolar da borda branca */
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* 7. Seção "Quer saber mais?" (Aside) */
+.more-info {
+    background-color: #F0F8FF; /* Fundo AliceBlue (bem claro, igual imagem) */
+    margin: 20px;
+    border: 1px solid #B0C4DE;
+    border-radius: 8px;
+    padding: 0; /* Removido padding para o header do aside funcionar */
+}
+
+.aside-header {
+    background-color: #2E477A; /* Azul escuro (igual imagem) */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px 8px 0 0; /* Cantos arredondados só no topo */
+}
+
+.aside-header h3 {
+    margin: 0;
+}
+
+.aside-content {
+    padding: 15px;
+}
+
+.aside-content h4 {
+    color: #2E477A;
+    margin-top: 0;
+}
+
+/* Container das listas (para ficarem lado a lado) */
+.lists-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permite quebrar em telas menores */
+    margin-bottom: 15px;
+}
+
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 10px;
+}
+
+.custom-list li {
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+/* Ícone de check do Bootstrap */
+.custom-list .bi-check {
+    color: #3B5998;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.more-info a {
+    color: #3B5998;
+    font-weight: bold;
+}
+
+/* 8. Parágrafo Final */
+.final-paragraph {
+    text-align: center;
+    font-style: italic;
+    padding: 0 20px 20px 20px; /* Padding inferior */
+}
+
+/* 9. Rodapé (Footer) */
+footer {
+    background-color: #2E477A; /* Azul escuro (sólido, igual nav) */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* 10. Layout Responsivo (para celulares) */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 5px 0;
+    }
+
+    .lists-container {
+        flex-direction: column;
+    }
+
+    .custom-list {
+        margin-bottom: 10px;
+    }
+
+    .video-container iframe {
+        height: 250px;
+    }
+}
